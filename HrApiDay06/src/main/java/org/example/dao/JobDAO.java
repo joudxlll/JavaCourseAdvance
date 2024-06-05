@@ -29,6 +29,8 @@ public class JobDAO {
         st.setString(2, d.getJob_title());
         st.setDouble(3, d.getJob_Minsalary());
         st.executeUpdate();
+        conn.close();
+
     }
 
     public void updatejob(Jobs d) throws SQLException {
@@ -38,6 +40,7 @@ public class JobDAO {
         st.setString(1, d.getJob_title());
         st.setDouble(2, d.getJob_Minsalary());
         st.executeUpdate();
+        conn.close();
     }
 
     public void deletejob(int jobtId) throws SQLException {
@@ -45,6 +48,8 @@ public class JobDAO {
         PreparedStatement st = conn.prepareStatement(DELETE_Jobs);
         st.setInt(1, jobtId);
         st.executeUpdate();
+        conn.close();
+
     }
 
     public Jobs selectjob(int jobId) throws SQLException {

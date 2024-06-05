@@ -13,13 +13,14 @@ public class EmployeeController {
 
     @GET
     public ArrayList<Employees> getAllEmployees(){
-        try {
             try {
-                return dao.selectAllEmps();
-            } catch (ClassNotFoundException e) {
-                throw new RuntimeException(e);
+                try {
+                    return dao.selectAllEmps();
+                } catch (ClassNotFoundException e) {
+                    throw new RuntimeException(e);
+                }
             }
-        } catch (SQLException e) {
+         catch (SQLException e) {
             throw new RuntimeException(e);
         }
 

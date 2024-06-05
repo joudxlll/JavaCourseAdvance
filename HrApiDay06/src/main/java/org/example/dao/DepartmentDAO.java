@@ -26,6 +26,8 @@ public class DepartmentDAO {
         st.setString(2, d.getDepartmentName());
         st.setInt(3, d.getLocationId());
         st.executeUpdate();
+        conn.close();
+
     }
 
     public void updateDept(Department d) throws SQLException, ClassNotFoundException {
@@ -36,6 +38,8 @@ public class DepartmentDAO {
         st.setString(1, d.getDepartmentName());
         st.setInt(2, d.getLocationId());
         st.executeUpdate();
+        conn.close();
+
     }
 
     public void deleteDept(int deptId) throws SQLException, ClassNotFoundException {
@@ -44,6 +48,8 @@ public class DepartmentDAO {
         PreparedStatement st = conn.prepareStatement(DELETE_DEPT);
         st.setInt(1, deptId);
         st.executeUpdate();
+        conn.close();
+
     }
 
     public Department selectDept(int deptId) throws SQLException, ClassNotFoundException {
