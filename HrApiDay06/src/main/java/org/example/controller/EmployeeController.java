@@ -64,10 +64,10 @@ public class EmployeeController {
 
     @PUT
     @Path("{empId}")
-    public void updateEmployee(@PathParam("emptId") int emptId, Employees emp) {
+    public void updateEmployee(@PathParam("empId") int empId, Employees emp) {
 
         try {
-            emp.setEmployee_id(emptId);
+            emp.setEmployee_id(empId);
             dao.updateEmp(emp);
         } catch (Exception e) {
             throw new RuntimeException(e);

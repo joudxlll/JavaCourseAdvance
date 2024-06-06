@@ -24,13 +24,9 @@ public class DepartmentController {
     @Context HttpHeaders headers;
 
     @GET
-    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON})
+    @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON, "text/csv"})
     public Response getAllDepartments(
-//            @QueryParam("locId") Integer locId,
-//            @QueryParam("limit") Integer limit,
-//            @QueryParam("offset") int offset
             @BeanParam DepartmentFilterDto filter
-
     ) {
         try {
             GenericEntity<ArrayList<Department>> depts = new GenericEntity<ArrayList<Department>>(dao.selectAllDepts(filter)) {};
@@ -40,12 +36,17 @@ public class DepartmentController {
                         .type(MediaType.APPLICATION_XML)
                         .build();
             }
+            else if(headers.getAcceptableMediaTypes().contains(MediaType.valueOf("text/csv"))) {
+                return Response
+                        .ok(depts)
+                        .type("text/csv")
+                        .build();
+            }
+
             return Response
-//                    .ok()
-//                    .entity(depts)
-//                    .type(MediaType.APPLICATION_JSON)
                     .ok(depts, MediaType.APPLICATION_JSON)
                     .build();
+
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

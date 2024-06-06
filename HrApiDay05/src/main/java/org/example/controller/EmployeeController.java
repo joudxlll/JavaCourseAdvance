@@ -55,7 +55,7 @@ public class EmployeeController {
 
     @PUT
     @Path("{empId}")
-    public void updateEmployee(@PathParam("emptId") int emptId, Employees emp) {
+    public void updateEmployee(@PathParam("empId") int emptId, Employees emp) {
 
         try {
             emp.setEmployee_id(emptId);
