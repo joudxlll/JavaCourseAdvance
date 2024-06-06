@@ -5,9 +5,13 @@ import jakarta.ws.rs.core.GenericEntity;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import org.example.dao.DepartmentDAO;
+import org.example.dto.DepartmentDto;
 import org.example.dto.DepartmentFilterDto;
+import org.example.exceptions.DataNotFoundException;
 import org.example.models.Department;
 
+import java.net.URI;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import jakarta.ws.rs.core.*;
 
@@ -49,15 +53,44 @@ public class DepartmentController {
 
     @GET
     @Path("{deptId}")
-    public Department getDepartment(@PathParam("deptId") int deptId) {
+    public Response getDepartment(@PathParam("deptId") int deptId) {
 
         try {
-            return dao.selectDept(deptId);
-        } catch (Exception e) {
+            Department dept = null;
+            try {
+                dept = dao.selectDept(deptId);
+            } catch (SQLException e) {
+                throw new RuntimeException(e);
+            }
+
+            if (dept == null) {
+                throw new DataNotFoundException("Department " + deptId + "Not found");
+            }
+
+            DepartmentDto dto = new DepartmentDto();
+            dto.setDepartmentId(dept.getDepartmentId());
+            dto.setDepartmentName(dept.getDepartmentName());
+            dto.setLocationId(dept.getLocationId());
+
+            addLinks(dto);
+
+            return Response.ok(dto).build();
+        }
+        catch (ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
 
+
+    private void addLinks(DepartmentDto dto) {
+        URI selfUri = uriInfo.getAbsolutePath();
+        URI empsUri = uriInfo.getAbsolutePathBuilder()
+                .path(EmployeeController.class)
+                .build();
+
+        dto.addLink(selfUri.toString(), "self");
+        dto.addLink(empsUri.toString(), "employees");
+    }
 
 
     @DELETE
@@ -72,11 +105,20 @@ public class DepartmentController {
     }
 
     @POST
-    @Consumes(MediaType.APPLICATION_XML)
-    public void insertDepartment(Department dept) {
+//    @Consumes(MediaType.APPLICATION_XML)
+    public Response insertDepartment(Department dept) {
 
         try {
             dao.insertDept(dept);
+            NewCookie cookie = (new NewCookie.Builder("username")).value("OOOOO").build();
+            URI uri = uriInfo.getAbsolutePathBuilder().path(dept.getDepartmentId() + "").build();
+            return Response
+//                    .status(Response.Status.CREATED)
+                    .created(uri)
+//                    .cookie(new NewCookie("username", "OOOOO"))
+                    .cookie(cookie)
+                    .header("Created by", "Joud")
+                    .build();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }

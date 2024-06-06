@@ -2,6 +2,7 @@ package org.example.dto;
 
 import jakarta.ws.rs.QueryParam;
 
+
 public class DepartmentFilterDto {
     private @QueryParam("locId") Integer locId;
     private @QueryParam("limit") Integer limit;

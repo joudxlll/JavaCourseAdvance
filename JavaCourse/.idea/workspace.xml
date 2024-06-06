@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7d29e9ce-5932-42ac-8407-41cb8de9d296" name="Changes" comment="day4">
+      <change beforePath="$PROJECT_DIR$/src/main/java/day4/hr.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/day4/hr.db" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {}
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/joudxlll/JavaCourse.git&quot;,
+    &quot;accountId&quot;: &quot;875d11b7-5390-4651-a575-efb9d15ffcc5&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2h5JCKLlwGUVs76iY3Lhgqdxaht" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.CountFromFile.executor": "Run",
+    "Application.ExceptionHandling.executor": "Run",
+    "Application.JDBCDeleteDemo.executor": "Run",
+    "Application.JDBCDemo.executor": "Run",
+    "Application.JDBCDemoV2.executor": "Run",
+    "Application.JDBCInserJobs.executor": "Run",
+    "Application.JDBCInsertDemo.executor": "Run",
+    "Application.JDBCInsertDemoV2.executor": "Run",
+    "Application.JDBCInsertDemoV3.executor": "Run",
+    "Application.LetterCounter.executor": "Run",
+    "Application.SortWordsInNewFile.executor": "Run",
+    "Application.Test.executor": "Run",
+    "Application.TestAccount.executor": "Run",
+    "Application.TestComparable.executor": "Run",
+    "Application.TestEmployee.executor": "Run",
+    "Application.TestEmployees.executor": "Run",
+    "Application.TestPatient.executor": "Run",
+    "Application.TestStudent.executor": "Run",
+    "Application.TestTrainers.executor": "Run",
+    "Application.Test_Employee.executor": "Run",
+    "Application.arraysAgain.executor": "Run",
+    "Application.caalMethod_pr.executor": "Run",
+    "Application.callMethod.executor": "Run",
+    "Application.callMethod_EX1.executor": "Run",
+    "Application.callMethod_pr.executor": "Run",
+    "Application.callMethods.executor": "Run",
+    "Application.checkDay.executor": "Run",
+    "Application.collectionsClasses.executor": "Run",
+    "Application.day4.Crud.JDBCDemo.executor": "Run",
+    "Application.fileRW.executor": "Run",
+    "Application.loopBasic.executor": "Run",
+    "Application.nestedLoops.executor": "Run",
+    "Application.passwordChecker.executor": "Run",
+    "Application.phoneChecker_pr.executor": "Run",
+    "Application.practice.executor": "Run",
+    "Application.quiz.executor": "Run",
+    "Application.quiz2.executor": "Run",
+    "Application.quiz2_pr.executor": "Run",
+    "Application.quiz3.executor": "Run",
+    "Application.stringBasic.executor": "Run",
+    "Application.studentMarks.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/dev/Desktop/HW",
+    "onboarding.tips.debug.path": "C:/Users/dev/IdeaProjects/untitled/src/main/java/org/example/Main.java",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\dev\IdeaProjects\JavaCourse\src\main\java\day4" />
+      <recent name="C:\Users\dev\IdeaProjects\JavaCourse\src\main\java\day2\Excercises\EX1" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="day4" />
+      <recent name="day3.exceptions" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Test">
+    <configuration name="JDBCDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day4.JDBCDemo" />
+      <module name="JavaCourse" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day4.HW.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JDBCDemoV2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day4.JDBCDemoV2" />
+      <module name="JavaCourse" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day4.HW.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JDBCInsertDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day4.JDBCInsertDemo" />
+      <module name="JavaCourse" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day4.HW.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="day4.HW.Test" />
+      <module name="JavaCourse" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="day4.HW.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.JDBCDemo" />
+        <item itemvalue="Application.JDBCDemoV2" />
+        <item itemvalue="Application.JDBCInsertDemo" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d29e9ce-5932-42ac-8407-41cb8de9d296" name="Changes" comment="" />
+      <created>1716877876812</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1716877876812</updated>
+    </task>
+    <task id="LOCAL-00001" summary="fff">
+      <option name="closed" value="true" />
+      <created>1716968492277</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716968492277</updated>
+    </task>
+    <task id="LOCAL-00002" summary="fff">
+      <option name="closed" value="true" />
+      <created>1716968518220</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1716968518220</updated>
+    </task>
+    <task id="LOCAL-00003" summary="change">
+      <option name="closed" value="true" />
+      <created>1716970918889</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1716970918889</updated>
+    </task>
+    <task id="LOCAL-00004" summary="change2">
+      <option name="closed" value="true" />
+      <created>1716972900786</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1716972900786</updated>
+    </task>
+    <task id="LOCAL-00005" summary="change3">
+      <option name="closed" value="true" />
+      <created>1716982419683</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1716982419683</updated>
+    </task>
+    <task id="LOCAL-00006" summary="change3">
+      <option name="closed" value="true" />
+      <created>1716982568793</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1716982568793</updated>
+    </task>
+    <task id="LOCAL-00007" summary="change3">
+      <option name="closed" value="true" />
+      <created>1716982707118</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1716982707118</updated>
+    </task>
+    <task id="LOCAL-00008" summary="change3">
+      <option name="closed" value="true" />
+      <created>1717090983334</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1717090983334</updated>
+    </task>
+    <task id="LOCAL-00009" summary="day4">
+      <option name="closed" value="true" />
+      <created>1717310545768</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1717310545768</updated>
+    </task>
+    <task id="LOCAL-00010" summary="day4">
+      <option name="closed" value="true" />
+      <created>1717328639520</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1717328639520</updated>
+    </task>
+    <task id="LOCAL-00011" summary="day4">
+      <option name="closed" value="true" />
+      <created>1717328719437</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1717328719437</updated>
+    </task>
+    <task id="LOCAL-00012" summary="day4">
+      <option name="closed" value="true" />
+      <created>1717355349534</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1717355349534</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ID_WIDTH">
+                <map>
+                  <entry key="Table.Default.Date.ColumnIdWidth" value="107" />
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="fff" />
+    <MESSAGE value="change" />
+    <MESSAGE value="change2" />
+    <MESSAGE value="change3" />
+    <MESSAGE value="day4" />
+    <option name="LAST_COMMIT_MESSAGE" value="day4" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

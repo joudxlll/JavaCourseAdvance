@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class DepartmentDAO {
 
-    private static final String URL = "jdbc:sqlite:C:\\Users\\dev\\IdeaProjects\\JavaCourse\\src\\main\\java\\day4\\hr.db";
+    private static final String URL = "jdbc:sqlite:C:\\Users\\dev\\IdeaProjects\\HrApiDay07\\src\\main\\java\\org\\example\\hr.db";
     private static final String SELECT_ALL_DEPTS = "select * from departments";
     private static final String SELECT_ONE_DEPT = "select * from departments where department_id = ?";
     private static final String SELECT_DEPT_WITH_LOC = "select * from departments where location_id = ?";
