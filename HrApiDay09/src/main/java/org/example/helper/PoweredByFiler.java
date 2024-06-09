@@ -15,6 +15,9 @@ public class PoweredByFiler implements ContainerResponseFilter {
 
     @Override
     public void filter(ContainerRequestContext requestContext, ContainerResponseContext responseContext) throws IOException {
-        responseContext.getHeaders().add("Path", uriInfo.getAbsolutePath());
+//        responseContext.getHeaders().add("Path", uriInfo.getAbsolutePath());
+        responseContext.getHeaders().add("Path", requestContext.getUriInfo().getAbsolutePath());
+
+
     }
 }

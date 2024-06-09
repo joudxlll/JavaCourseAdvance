@@ -5,21 +5,26 @@ import jakarta.ws.rs.core.GenericEntity;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import org.example.dao.DepartmentDAO;
+import org.example.dao.LocationDAO;
 import org.example.dto.DepartmentDto;
 import org.example.dto.DepartmentFilterDto;
 import org.example.exceptions.DataNotFoundException;
+import org.example.mappers.DepartmentMapper;
 import org.example.models.Department;
 
 import java.net.URI;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import jakarta.ws.rs.core.*;
+import org.example.models.Location;
 
 
 @Path("/departments")
 public class DepartmentController {
 
     DepartmentDAO dao = new DepartmentDAO();
+    LocationDAO locDao = new LocationDAO();
+
     @Context UriInfo uriInfo;
     @Context HttpHeaders headers;
 
@@ -55,24 +60,19 @@ public class DepartmentController {
     @GET
     @Path("{deptId}")
     @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML, "text/csv"})
-    public Response getDepartment(@PathParam("deptId") int deptId) {
+    public Response getDepartment(@PathParam("deptId") int deptId) throws SQLException {
 
         try {
-            Department dept = null;
-            try {
-                dept = dao.selectDept(deptId);
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
-            }
+            Department dept = dao.selectDept(deptId);
 
             if (dept == null) {
                 throw new DataNotFoundException("Department " + deptId + "Not found");
             }
 
-            DepartmentDto dto = new DepartmentDto();
-            dto.setDepartmentId(dept.getDepartmentId());
-            dto.setDepartmentName(dept.getDepartmentName());
-            dto.setLocationId(dept.getLocationId());
+//            Location loc = locDao.selectLoc(dept.getLocationId());
+
+//            DepartmentDto dto = DepartmentMapper.INSTANCE.toDeptDto(dept, loc);
+            DepartmentDto dto = DepartmentMapper.INSTANCE.toDeptDto(dept);
 
             addLinks(dto);
 
@@ -82,7 +82,6 @@ public class DepartmentController {
             throw new RuntimeException(e);
         }
     }
-
 
     private void addLinks(DepartmentDto dto) {
         URI selfUri = uriInfo.getAbsolutePath();
@@ -108,9 +107,11 @@ public class DepartmentController {
 
     @POST
     @Consumes(MediaType.APPLICATION_XML)
-    public Response insertDepartment(Department dept) {
+    public Response insertDepartment(DepartmentDto dto) {
 
         try {
+            Department dept = DepartmentMapper.INSTANCE.toModel(dto);
+
             dao.insertDept(dept);
             NewCookie cookie = (new NewCookie.Builder("username")).value("OOOOO").build();
             URI uri = uriInfo.getAbsolutePathBuilder().path(dept.getDepartmentId() + "").build();

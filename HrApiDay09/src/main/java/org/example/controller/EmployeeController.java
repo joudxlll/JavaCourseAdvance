@@ -6,6 +6,8 @@ import org.example.dao.EmployeeDAO;
 import org.example.dto.EmployeeDto;
 import org.example.dto.EmployeeFilterDto;
 import org.example.exceptions.EmployeeServiceException;
+import org.example.mappers.EmployeeMapper;
+import org.example.mappers.JobMapper;
 import org.example.models.Employees;
 import org.example.exceptions.DataNotFoundException;
 
@@ -80,10 +82,10 @@ public class EmployeeController {
                 throw new DataNotFoundException("Employee " + empId + " Not found");
             }
 
-            EmployeeDto dto = new EmployeeDto();
-            dto.setEmployee_id(emp.getEmployee_id());
-            dto.setHire_date(emp.getHire_date());
-            dto.setJob_id(emp.getJob_id());
+            EmployeeDto dto = EmployeeMapper.INSTANCE.toEmpDto(emp);
+//            dto.setEmployee_id(emp.getEmployee_id());
+//            dto.setHire_date(emp.getHire_date());
+//            dto.setJob_id(emp.getJob_id());
 
             addLinks(dto);
 
