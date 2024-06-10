@@ -3,10 +3,11 @@ package org.example.dao;
 import org.example.dto.DepartmentFilterDto;
 import org.example.models.Department;
 
+import java.io.Serializable;
 import java.sql.*;
 import java.util.ArrayList;
 
-public class DepartmentDAO {
+public class DepartmentDAO implements Serializable {
 
     private static final String URL = "jdbc:sqlite:C:\\Users\\dev\\IdeaProjects\\HrApiDay07\\src\\main\\java\\org\\example\\hr.db";
     private static final String SELECT_ALL_DEPTS = "select * from departments";

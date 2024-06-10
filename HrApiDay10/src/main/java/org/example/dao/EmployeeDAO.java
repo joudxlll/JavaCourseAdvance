@@ -17,6 +17,8 @@ public class EmployeeDAO {
     private static final String SELECT_ALL_EMPS_Join_JOB = "select * from employees join jobs on employees.job_id = jobs.job_id where employee_id = ?";
 
     private static final String SELECT_ONE_EMP = "select * from employees where employee_id = ?";
+    private static final String SELECT_FIRST_NAME = "select * from employees where first_name = ?";
+
     private static final String INSERT_EMP = "INSERT INTO employees VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
     private static final String UPDATE_EMP = "UPDATE employees set first_name = ?, last_name = ? WHERE employee_id = ?";
     private static final String DELETE_EMP = "delete from employees where employee_id = ?";
@@ -78,6 +80,25 @@ public class EmployeeDAO {
 
     }
 
+    public Employees findFirst(String name) throws SQLException, ClassNotFoundException {
+        Class.forName("org.sqlite.JDBC");
+        Connection conn = DriverManager.getConnection(URL);
+//        PreparedStatement st = conn.prepareStatement(SELECT_ONE_EMP);
+        PreparedStatement st = conn.prepareStatement(SELECT_FIRST_NAME);
+
+        st.setString(1, name);
+        ResultSet rs = st.executeQuery();
+        if(rs.next()) {
+            return new Employees(rs);
+        }
+        else {
+            return null;
+        }
+
+    }
+
+
+
     public ArrayList<Employees> selectAllEmps(EmployeeFilterDto filter) throws SQLException, ClassNotFoundException {
         Class.forName("org.sqlite.JDBC");
         Connection conn = DriverManager.getConnection(URL);
@@ -113,4 +134,6 @@ public class EmployeeDAO {
 //        rs.close();
 //        return emps;
 //    }
+
+
 }

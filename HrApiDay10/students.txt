@@ -1,0 +1,4 @@
+First Person Name: Ali    Age: 22   Address: Qassim   Course: Mathematics  Student ID: 1002
+First Person Name: Joud    Age: 20   Address: Riyadh   Course: Computer Science  Student ID: 1001
+First Person Name: Khalid    Age: 24   Address: Riyadh   Course: Biology  Student ID: 1004
+First Person Name: Nour    Age: 25   Address: Jeddah   Course: Physics  Student ID: 1003

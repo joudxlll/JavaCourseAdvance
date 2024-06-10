@@ -3,6 +3,7 @@ package org.example.services;
 
 import jakarta.enterprise.context.RequestScoped;
 
+//every time it create a new object
 @RequestScoped
 public class RequestService {
 
@@ -11,4 +12,6 @@ public class RequestService {
     public int getCount() {
         return ++count;
     }
+
+
 }

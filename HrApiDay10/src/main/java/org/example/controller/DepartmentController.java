@@ -1,5 +1,6 @@
 package org.example.controller;
 
+import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.GenericEntity;
 import jakarta.ws.rs.core.MediaType;
@@ -22,11 +23,15 @@ import org.example.models.Location;
 @Path("/departments")
 public class DepartmentController {
 
-    DepartmentDAO dao = new DepartmentDAO();
-    LocationDAO locDao = new LocationDAO();
-
+    @Inject
+    DepartmentDAO dao;
+    @Inject
+    LocationDAO locDao;
     @Context UriInfo uriInfo;
     @Context HttpHeaders headers;
+
+    @Inject
+    DepartmentMapper mapper;
 
     @GET
     @Produces({MediaType.APPLICATION_XML, MediaType.APPLICATION_JSON, "text/csv"})
