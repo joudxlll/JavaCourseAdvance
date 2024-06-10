@@ -52,6 +52,13 @@ public Employees(){
         }
         }
 
+    public Jobs getJob() {
+        return job;
+    }
+
+    public void setJob(Jobs job) {
+        this.job = job;
+    }
 
     public int getEmployee_id() {
         return employee_id;
