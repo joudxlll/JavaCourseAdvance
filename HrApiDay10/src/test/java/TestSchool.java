@@ -50,7 +50,7 @@ public class TestSchool {
         expected.add(s2);
         expected.add(s3);
 
-        Assertions.assertEquals(expected, actual);
+        Assertions.assertIterableEquals(expected, actual);
     }
 
     @Test
