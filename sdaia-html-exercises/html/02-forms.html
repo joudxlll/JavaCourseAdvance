@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+    <link rel="stylesheet" href="../Css/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <script src="../Css/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function myFun(){
+            document.getElementById("username").value= "";
+            document.getElementById("pass").value= "";
+        }
+        function moveToAnotherPage(){
+            let var1=document.getElementById("username").value.trim()
+            let var2=document.getElementById("pass").value.trim()
+
+            if (var1 !== "" && var2 !== ""){
+                window.location.href = '03-styles.html';
+            }
+
+
+        }
+
+    </script>
+</head>
+<body>
+
+<div class="container mt-3">
+    <h2>LOG IN</h2>
+
+    <form  action="01-welcome.html">
+        <div class="mb-3 mt-3">
+            <label for="username">First name:</label>
+            <input type="text" class="form-control" id="username" name="username" required>
+        </div>
+        <div class="mb-3">
+            <label for="pass" >password:</label>
+            <input type="password" class="form-control" id="pass"  name="pass" required>
+        </div>
+
+        <input type="submit" class="btn btn-primary" value="Submit">
+    </form>
+    <br>
+
+    <button type="button" class="btn btn-primary" onclick="myFun()">
+        Reset
+    </button>
+
+    <button type="button" class="btn btn-primary" onclick="moveToAnotherPage()">
+        Move to Style Page
+    </button>
+</div>
+
+
+
+</body>
+</html>

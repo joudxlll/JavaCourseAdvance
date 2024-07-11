@@ -1,0 +1,47 @@
+
+<body>
+<div class="container">
+    <h1>Medical Records</h1>
+
+    <div>
+        <h2>Search Medical Records by Patient ID</h2>
+        <form (ngSubmit)="searchMedicalRecords()">
+            <div class="form-group">
+                <label>Patient ID:</label>
+                <input type="number" name="patientId" [(ngModel)]="patient_id">
+            </div>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <div *ngIf="medicalReports.length > 0">
+        <h2>Medical Records List</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>Record ID</th>
+                <th>Patient ID</th>
+                <th>Record Details</th>
+                <th>Record Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let report of medicalReports">
+                <td>{{ report.MR_id }}</td>
+                <td>{{ report.patient_id }}</td>
+                <td>
+                    <ul>
+                        <ng-container *ngFor="let detail of report.MR_details.split('Consultation ID: ')">
+                            <li *ngIf="detail.trim().length > 0">
+                                Consultation ID: {{ detail.trim() }}
+                            </li>
+                        </ng-container>
+                    </ul>
+                </td>
+                <td>{{ report.MR_reportDate.replace('T', ' ').replace('Z[UTC]', '') }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>

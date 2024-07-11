@@ -1,0 +1,117 @@
+/*!* General Styles *!*/
+/*body {*/
+/*    font-family: Arial, sans-serif;*/
+/*    background-color: #f0f0f0;*/
+/*    margin: 0;*/
+/*    padding: 0;*/
+/*}*/
+
+/*.container {*/
+/*    max-width: 1200px; !* Adjusted for wider content *!*/
+/*    margin: 20px auto;*/
+/*    background-color: #fff;*/
+/*    padding: 20px;*/
+/*    border-radius: 8px;*/
+/*    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/*h1, h2 {*/
+/*    color: #1e90ff; !* Dodger blue *!*/
+/*    text-align: center;*/
+/*}*/
+
+/*p {*/
+/*    color: #555;*/
+/*    margin-bottom: 10px;*/
+/*}*/
+
+/*!* Table Styles *!*/
+/*table {*/
+/*    width: 100%;*/
+/*    border-collapse: collapse;*/
+/*    margin-top: 10px;*/
+/*}*/
+
+/*th, td {*/
+/*    border: 1px solid #ddd;*/
+/*    padding: 12px; !* Increased padding for better spacing *!*/
+/*    text-align: left;*/
+/*}*/
+
+/*th {*/
+/*    background-color: #f0f8ff; !* Alice blue *!*/
+/*    color: #1e90ff; !* Dodger blue *!*/
+/*    font-weight: bold; !* Enhance header readability *!*/
+/*}*/
+
+/*tr:nth-child(even) {*/
+/*    background-color: #f0f0ff; !* Lavender *!*/
+/*}*/
+
+/*tr:hover {*/
+/*    background-color: #e7f3ff; !* Light blue *!*/
+/*}*/
+
+/*!* Form and Input Styles *!*/
+/*.form-group {*/
+/*    margin-bottom: 15px; !* Adjusted margin for better spacing *!*/
+/*}*/
+
+/*label {*/
+/*    font-weight: bold;*/
+/*    margin-bottom: 5px;*/
+/*    display: block;*/
+/*}*/
+
+/*input[type="text"], input[type="password"], button[type="submit"] {*/
+/*    padding: 10px;*/
+/*    font-size: 16px;*/
+/*    border: 1px solid #87ceeb; !* Sky blue *!*/
+/*    border-radius: 4px;*/
+/*    width: 100%;*/
+/*    box-sizing: border-box;*/
+/*}*/
+
+/*button[type="submit"] {*/
+/*    background-color: #1e90ff; !* Dodger blue *!*/
+/*    color: white;*/
+/*    border: none;*/
+/*    cursor: pointer;*/
+/*    transition: background-color 0.3s ease;*/
+/*}*/
+
+/*button[type="submit"]:hover {*/
+/*    background-color: #007bff; !* Blue *!*/
+/*}*/
+
+/*!* Sign-in and Sign-up Form Styles *!*/
+/*.sign-in-container, .sign-up-container {*/
+/*    max-width: 400px; !* Adjusted for a more compact form *!*/
+/*    margin: 20px auto;*/
+/*    padding: 20px;*/
+/*    background-color: #f0f8ff; !* Light blue *!*/
+/*    border-radius: 8px;*/
+/*    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/*.sign-in-container h2, .sign-up-container h2 {*/
+/*    color: #1e90ff; !* Dodger blue *!*/
+/*    text-align: center;*/
+/*}*/
+
+/*.sign-up-form, .sign-in-form {*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*}*/
+
+/*@media screen and (max-width: 768px) {*/
+/*    .container, .sign-in-container, .sign-up-container {*/
+/*        padding: 10px; !* Adjusted padding for smaller screens *!*/
+/*    }*/
+/*}*/
+
+/*@media screen and (max-width: 600px) {*/
+/*    .container, .sign-in-container, .sign-up-container {*/
+/*        max-width: 90%; !* Adjusted max-width for smaller screens *!*/
+/*    }*/
+/*}*/

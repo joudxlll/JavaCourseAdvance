@@ -1,0 +1,107 @@
+<body>
+<div class="container">
+<div class="search-doctors-container">
+    <h2>Search Doctors</h2>
+    <form (ngSubmit)="onSearch()" class="search-form">
+        <div class="form-group">
+            <label>Doctor ID:</label>
+            <input type="text" name="doctor_id" [(ngModel)]="filter.doctor_id" class="search-input">
+        </div>
+        <div class="form-group">
+            <label>Doctor Name:</label>
+            <input type="text" name="doctor_name" [(ngModel)]="filter.doctor_name" class="search-input">
+        </div>
+        <div class="form-group">
+            <label>Specialty:</label>
+            <input type="text" name="doctor_specialty" [(ngModel)]="filter.doctor_specialty" class="search-input">
+        </div>
+        <div class="form-group">
+            <label>Is Available:</label>
+            <select name="isAvailable" [(ngModel)]="filter.isAvailable" class="search-input">
+                <option value="">Any</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label>Consultation Rate:</label>
+            <input type="text" name="consultation_rate" [(ngModel)]="filter.consultation_rate" class="search-input">
+        </div>
+        <button type="submit" class="search-button">Search</button>
+    </form>
+</div>
+
+<div *ngIf="data" class="doctor-data-container">
+    <h2>Doctors Response Data</h2>
+    <table class="doctor-data-table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Specialty</th>
+            <th>Rate</th>
+            <th>Available</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let doctor of data">
+            <td>{{ doctor.doctor_id }}</td>
+            <td>{{ doctor.doctor_name }}</td>
+            <td>{{ doctor.doctor_specialty }}</td>
+            <td>{{ doctor.consultation_rate }}</td>
+            <td>{{ doctor.available ? 'Yes' : 'No' }}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</div>
+</body>
+<!--<div *ngIf="data" class="doctor-data-container">-->
+<!--    <h2>Doctors Response Data</h2>-->
+<!--    <table class="doctor-data-table">-->
+<!--        <thead>-->
+<!--        <tr>-->
+<!--            <th>ID</th>-->
+<!--            <th>Name</th>-->
+<!--            <th>Specialty</th>-->
+<!--            <th>Rate</th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--        <tr *ngFor="let doctor of data">-->
+<!--            <td>{{ doctor.doctor_id }}</td>-->
+<!--            <td>{{ doctor.doctor_name }}</td>-->
+<!--            <td>{{ doctor.doctor_specialty }}</td>-->
+<!--            <td>{{ doctor.consultation_rate }}</td>-->
+<!--        </tr>-->
+<!--        </tbody>-->
+<!--    </table>-->
+<!--</div>-->
+
+<!--<div class="search-doctors-container">-->
+<!--    <h2>Search Doctors</h2>-->
+<!--    <form (ngSubmit)="onSearch()" class="search-form">-->
+<!--        <div class="form-group">-->
+<!--            <label>Doctor ID:</label>-->
+<!--            <input type="text" name="doctor_specialty" [(ngModel)]="filter.doctor_id" class="search-input">-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--            <label>Doctor Name:</label>-->
+<!--            <input type="text" name="doctor_specialty" [(ngModel)]="filter.doctor_name" class="search-input">-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--            <label>Specialty:</label>-->
+<!--            <input type="text" name="doctor_specialty" [(ngModel)]="filter.doctor_specialty" class="search-input">-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--            <label>isAvailable:</label>-->
+<!--            <input type="text" name="doctor_specialty" [(ngModel)]="filter.isAvailable" class="search-input">-->
+<!--        </div>-->
+<!--        <div class="form-group">-->
+<!--            <label>consultation Rate:</label>-->
+<!--            <input type="text" name="doctor_specialty" [(ngModel)]="filter.consultation_rate" class="search-input">-->
+<!--        </div>-->
+<!--        <button type="submit" class="search-button">Search</button>-->
+<!--    </form>-->
+<!--</div>-->

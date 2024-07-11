@@ -1,0 +1,146 @@
+/* Resetting default margins and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Base styles */
+body {
+    margin: 100px;
+    color: #afabc4;
+    background: #faf8fb;
+    font: 14px/1.5 tahoma, arial, "黑体", "\5b8b\4f53", sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-size: 200%;
+    box-shadow: 0 12px 15px 0 rgba(65, 40, 111, 0.24), 0 17px 60px 0 rgba(65, 46, 111, 0.19);
+}
+
+h1, h2 {
+    color: #7461aa;
+    margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    color: #7461aa;
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: calc(100% - 10px); /* Adjust for border and padding */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #7461aa;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #563d88;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f1f6;
+    color: #7461aa;
+}
+
+p {
+    margin-top: 20px;
+}
+
+/* Additional styles for the new section */
+.search-doctors-container {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.search-doctors-container h2 {
+    color: #7461aa;
+    margin-bottom: 20px;
+}
+
+.search-form {
+    margin-bottom: 20px;
+}
+
+.search-input {
+    width: calc(100% - 12px); /* Adjust for border and padding */
+}
+
+.search-button {
+    background-color: #7461aa;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #563d88;
+}
+
+.doctor-data-container {
+    margin-top: 20px;
+}
+
+.doctor-data-container h2 {
+    color: #7461aa;
+    margin-bottom: 20px;
+}
+
+.doctor-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.doctor-data-table th, .doctor-data-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+.doctor-data-table th {
+    background-color: #f2f1f6;
+    color: #7461aa;
+}
+

@@ -1,0 +1,109 @@
+
+<body>
+<div class="container">
+    <h1>Schedule</h1>
+
+
+    <div>
+        <h2>Search Doctor's Schedule</h2>
+        <form (ngSubmit)="onSubmitSearch()">
+            <div class="form-group">
+                <label>Doctor ID:</label>
+                <input type="number" name="schedule_id" [(ngModel)]="docId">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div *ngIf="schedule">
+        <h2>Doctor's Schedule</h2>
+        <table class="schedule-table">
+            <thead>
+            <tr>
+                <th>Schedule ID</th>
+                <th>Doctor ID</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Availability</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{ schedule.schedule_id }}</td>
+                <td>{{ schedule.doctor_id }}</td>
+                <td>{{ schedule.schedule_startTime }}</td>
+                <td>{{ schedule.schedule_endTime }}</td>
+                <td>{{ schedule.available ? 'Yes' : 'No' }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+    <div>
+        <h2>Add Schedule</h2>
+        <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label>Doctor ID:</label>
+                <input type="number" name="doctor_id" [(ngModel)]="insertSchedule.doctor_id">
+            </div>
+
+            <div class="form-group">
+                <label for="startTime">Start Time:</label>
+                <input type="text" id="startTime" name="startTime" [(ngModel)]="insertSchedule.schedule_startTime">
+            </div>
+
+            <div class="form-group">
+                <label for="endTime">End Time:</label>
+                <input type="text" id="endTime" name="endTime" [(ngModel)]="insertSchedule.schedule_endTime">
+            </div>
+
+            <div class="form-group">
+                <label>Available:</label>
+                <div>
+                    <label>
+                        <input type="radio" name="availability" [(ngModel)]="insertSchedule.isAvailable" [value]="true"> Available
+                    </label>
+                    <label>
+                        <input type="radio" name="availability" [(ngModel)]="insertSchedule.isAvailable" [value]="false"> Not Available
+                    </label>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+
+
+
+    <div>
+        <h2>Update Schedule Availability</h2>
+        <form (ngSubmit)="onSubmitUpdate()">
+            <div class="form-group">
+                <label>Schedule ID:</label>
+                <input type="number" name="schedule_id" [(ngModel)]="updateSchedule.schedule_id">
+            </div>
+
+            <div class="form-group">
+                <label>Available:</label>
+                <div>
+                    <label>
+                        <input type="radio" name="availability" [(ngModel)]="updateSchedule.isAvailable" [value]=true> Available
+                    </label>
+                    <label>
+                        <input type="radio" name="availability" [(ngModel)]="updateSchedule.isAvailable" [value]=false> Not Available
+                    </label>
+                </div>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+
+
+</div>
+</body>

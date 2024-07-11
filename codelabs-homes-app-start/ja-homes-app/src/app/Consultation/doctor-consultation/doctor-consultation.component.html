@@ -1,0 +1,79 @@
+<body>
+
+<div class="container">
+    <h1>Consultation</h1>
+
+    <!-- Doctor -->
+    <div>
+        <h2>Search Pending Consultation</h2>
+        <form (ngSubmit)="onSearch()">
+            <div class="form-group">
+                <label>Doctor ID:</label>
+                <input type="text" name="doctor_id" [(ngModel)]="filter.doctor_id">
+            </div>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <!-- Table -->
+    <div *ngIf="data && !isDataEmpty()">
+        <h2>Result</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Doctor ID</th>
+                <th>Patient ID</th>
+                <th>Doctor Name</th>
+                <th>Patient Name</th>
+                <th>Request Time</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let con of data">
+                <td>{{ con.consultation_id }}</td>
+                <td>{{ con.doctor_id }}</td>
+                <td>{{ con.patient_id }}</td>
+                <td>{{ con.doctor_name }}</td>
+                <td>{{ con.patient_name }}</td>
+                <td>{{ con.consultation_requestTime.replace('T', ' ').replace('Z[UTC]', '') }}</td>
+                <td>{{ con.consultation_status }}</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div *ngIf="isDataEmpty() && data">
+        <p>No pending consultations found.</p>
+    </div>
+
+
+
+
+    <!-- Doctor -->
+    <div>
+        <h2>Update Consultation</h2>
+        <form (ngSubmit)="onSubmitUpdate()">
+            <div class="form-group">
+                <label>Consultation ID:</label>
+                <input type="number" name="consultation_id" [(ngModel)]="updateConsultation.consultation_id">
+            </div>
+            <div class="form-group">
+                <label>Statud:</label>
+                <input type="text" name="consultation_status" [(ngModel)]="updateConsultation.consultation_status">
+            </div>
+            <div class="form-group">
+                <label>Diagnose:</label>
+                <input type="text" name="consultation_diagnosis" [(ngModel)]="updateConsultation.consultation_diagnosis">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+
+
+</div>
+</body>
+

@@ -1,0 +1,24 @@
+<!-- Doctor Dashboard Component Template -->
+
+<div class="dashboard-container">
+    <div class="sidebar">
+        <!-- Navigation Menu -->
+        <nav>
+            <ul class="menu">
+                <li><a routerLink="/doctorDashboard/schedule">Manage Schedule</a></li>
+                <li><a routerLink="/doctorDashboard/consultation-requests">Consultation Requests</a></li>
+                <li><a routerLink="/doctorDashboard/search-patients-MR">Search Patients' Medical Record</a></li>
+                <!-- Add more menu items for additional functionalities -->
+            </ul>
+        </nav>
+    </div>
+
+    <div class="main-content">
+        <!-- Dashboard Overview -->
+        <h2>Welcome, Doctor!</h2>
+        <p>Here's a quick overview of your activities and pending tasks.</p>
+
+        <!-- Router Outlet for Dynamic Content -->
+        <router-outlet></router-outlet>
+    </div>
+</div>
